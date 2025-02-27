@@ -48,6 +48,10 @@ int compile_and_run(const char *test_file, const char *func_file, const char *ou
 		return (2);
 	}
 	snprintf(rm_bin, sizeof(rm_bin), "rm %s/%s", out_dir, output_bin);
-	system(rm_bin);
+	if(system(rm_bin) != 0)
+	{
+		libft_printf_err("error: deleting %s failed.\n", full_output_bin);
+		return (2);
+	}
 	return (TESTPASSED);
 }
