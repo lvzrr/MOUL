@@ -10,3 +10,4 @@ int		ft_strlen(char *str);
 void	ft_rev_int_tab(int *tab, int l);
 void	ft_sort_int_tab(int *tab, int l);
 char	*ft_strcpy(char *dest, char *src);
+char	*ft_strncpy(char *dest, char *src, unsigned int size);
