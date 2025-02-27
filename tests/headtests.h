@@ -9,3 +9,4 @@ void	ft_ultimate_div_mod(int *c, int *d);
 int		ft_strlen(char *str);
 void	ft_rev_int_tab(int *tab, int l);
 void	ft_sort_int_tab(int *tab, int l);
+char	*ft_strcpy(char *dest, char *src);

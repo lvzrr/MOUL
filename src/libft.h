@@ -28,7 +28,6 @@
 int				libft_atoi(char *str);
 int				libft_strcmp(const char *s1, const char *s2);
 int				libft_strlcat(char *dst, char *src, unsigned int size);
-int				libft_test01(void);
 char			*libft_gen_rand_str(unsigned int max_size);
 void			libft_putchar(char c);
 void			libft_print_err(char *str);
@@ -40,4 +39,7 @@ void			libft_putnbr(int nbr);
 void			libft_putnbr_err(int nbr);
 unsigned int	libft_strlen(char *src);
 
+int				libft_test01(void);
+int				libft_test02(void);
+int				compile_and_run(const char *tf, const char *ff, const char *ob);
 #endif
