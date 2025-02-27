@@ -5,6 +5,7 @@
 
 int main()
 {
+	srand(time(NULL));
 	int 			c;
 	int 			c2;
 	int 			l;
@@ -28,7 +29,7 @@ int main()
 		while (c2 < l) {
 			s[c2++] = 20 + rand() % 235;
 		}
-		s[c2] = '\0'; 
+		s[c2] = '\0';
 		r = ft_strncpy(d, s, n);
 		if (libft_strncmp(r, s, n) != 0)
 		{
@@ -37,7 +38,6 @@ int main()
 			free(s);
 			return (1);
 		}
-		
 		free(d);
 		free(s);
 		c++;
