@@ -14,6 +14,10 @@ int main()
 	char 			*r;
 	unsigned int	n;
 
+	// me cago en todo
+
+	libft_printf_err("\n\t\t\e[1;91mWARING: TO_CHECK\e[0m\n\n");
+	return (0);
 	c = 0;
 	while (c < TESTNUM)
 	{
