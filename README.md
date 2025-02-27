@@ -17,4 +17,5 @@ For C01 it would be:
 ```bash
 moul 1
 ```
-[!NOTE] Make sure you are in the root of your git repo
+> [!WARNING] 
+> Make sure you are in the root of your git repo
