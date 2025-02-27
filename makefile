@@ -37,7 +37,7 @@ install:
 	grep -qxF "export MOUL_TEST_BIN='$(HOME)/.moul/.test_cache'" ~/.zshrc || echo "export MOUL_TEST_BIN='$(HOME)/.moul/.test_cache'" >> ~/.zshrc
 	grep -qxF "export MOUL_BIN='$(HOME)/.moul/.cache'" ~/.zshrc || echo "export MOUL_BIN='$(HOME)/.moul/.cache'" >> ~/.zshrc
 	grep -qxF "alias moul='$(HOME)/.moul/moul-bin'" ~/.zshrc || echo "alias moul='$(HOME)/.moul/moul-bin'" >> ~/.zshrc
-	echo "Installation complete! Please restart your shell or run 'source ~/.zshrc' to apply changes."
 	$(MAKE) all
+	@printf "\n\e[1;92m[+]\e[0m Installation complete! Please restart your shell or run 'source ~/.zshrc' to apply changes.\n"
 
 .PHONY: all clean fclean re install
