@@ -50,7 +50,7 @@ int libft_test02(void)
         r = _02tests[i]();
         if (r != TESTPASSED)
         {
-            libft_printf_err("[ex0%d]: KO\n", i);
+            libft_printf_err("\e[1;91m[ex0%d]: KO\e[0m\n", i);
             return r;
         }
         snprintf(msg, sizeof(msg), "\e[1;92m[+]\e[0m Tests for ex0%zu passed!\n\n\n", i);
