@@ -1,15 +1,3 @@
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   c1e7.c                                             :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: jaicastr <jaicastr@student.42madrid.com>   +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/02/27 17:03:35 by jaicastr          #+#    #+#             */
-/*   Updated: 2025/02/27 17:07:05 by jaicastr         ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
-
 #include "headtests.h"
 
 #undef TESTNUM
@@ -44,7 +32,7 @@ int	main(void)
 		{
 			if(tab[c2] != tab2[l - c2 - 1])
 			{
-				libft_printf_err("\n\t\tFAILED TEST (no debug)\n\n");
+				libft_printf_err("\n\t\t\e[1;91mFAILED TEST\e[0m (no debug)\n\n");
 				free(tab);
 				free(tab2);
 				return (0);

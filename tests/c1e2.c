@@ -1,15 +1,3 @@
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   c1e2.c                                             :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: jaicastr <jaicastr@student.42madrid.com>   +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/02/27 16:02:43 by jaicastr          #+#    #+#             */
-/*   Updated: 2025/02/27 16:04:25 by jaicastr         ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
-
 #include "headtests.h"
 
 int	main(void)
@@ -30,6 +18,7 @@ int	main(void)
 		t2 = p2;
 		ft_swap(&p1, &p2);
 		if (p1 != t2 || p2 != t1)
+			libft_printf_err("\n\t\t\e[1;91mFAILED TEST\e[0m:\n\t\t\tinput:\t%d, %d\n\t\t\toutput:\t%d, %d\n\n",t1, t2, p1, p2);
 			return (0);
 		c++;
 	}

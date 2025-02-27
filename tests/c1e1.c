@@ -1,16 +1,4 @@
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   c1e1.c                                             :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: jaicastr <jaicastr@student.42madrid.com>   +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/02/27 16:04:31 by jaicastr          #+#    #+#             */
-/*   Updated: 2025/02/27 16:04:31 by jaicastr         ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
-
-#include "headtests.h"
+# "headtests.h"
 
 int main(void) 
 {
@@ -32,7 +20,10 @@ int main(void)
 		int *********p9 = &p8;
 		ft_ultimate_ft(p9);
 		if (*********p9 != 42)
+		{
+			libft_printf_err("\n\t\t\e[1;91mFAILED TEST\e[0m:\n\t\t\tinput:\t%d\n\t\t\toutput:\t%d\n\n",*********p9, 42);
 			return (1);
+		}
 		c++;
 	}
     return (0);

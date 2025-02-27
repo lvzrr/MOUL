@@ -16,7 +16,7 @@ int	main(void)
 		lo = ft_strlen(str);
 		if (lo != l)
 		{
-			libft_printf_err("\n\t\tFAILED TEST:\n\t\t\tinput: %s\n\t\t\toutput: %d\n\t\t\texpected: %d\n\n",str,l,lo);
+			libft_printf_err("\n\t\t\e[1;91mFAILED TEST\e[0m:\n\t\t\tinput: %s\n\t\t\toutput: %d\n\t\t\texpected: %d\n\n",str,l,lo);
 			return (1);
 		}
 		c++;

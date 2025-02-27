@@ -1,15 +1,3 @@
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   test00.c                                           :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: jaicastr <jaicastr@student.42madrid.com>   +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/02/27 01:05:50 by jaicastr          #+#    #+#             */
-/*   Updated: 2025/02/27 01:15:17 by jaicastr         ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
-
 #include "libft.h"
 
 int compile_and_run(const char *test_file, const char *func_file, const char *output_bin)
@@ -45,14 +33,14 @@ int compile_and_run(const char *test_file, const char *func_file, const char *ou
 		libft_printf_err("error: command too long to fit in the buffer (compilation).\n");
 		return (1);
 	}
-	libft_printf("\t\033[8mcompiling: %s\033[0m\n", command);
+	libft_printf("\tcompiling: %s\n", command);
 	result = system(command);
 	if (result != 0)
 	{
 		libft_printf_err("error: compilation of %s failed.\n", func_file);
 		return (1);
 	}
-	libft_printf("\t\033[8mrunning: %s\033[0m\n", full_output_bin);
+	libft_printf("\trunning: %s\n", full_output_bin);
 	result = system(full_output_bin);
 	if (result != TESTPASSED)
 	{
@@ -92,6 +80,12 @@ int libft_test01(void)
     int r;
     size_t nb_tests = sizeof(tests) / sizeof(tests[0]);
 
+	r = system("norminette");
+	if (r != 0)
+	{
+		libft_printf_err("\e[1;91m[X]\e[0m ERROR: Check the Norm\n");
+		return (1);
+	}
     for (size_t i = 0; i < nb_tests; i++)
     {
         char msg[64];
