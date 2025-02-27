@@ -1,6 +1,6 @@
-#include "testheads.h"
+#include "test.h"
 
-#undefine TESTNUM
+#undef TESTNUM
 #define TESTNUM 10000
 
 int	main()

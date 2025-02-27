@@ -1,4 +1,4 @@
-#include "headtests.h"
+#include "test.h"
 
 #undef TESTNUM
 #define TESTNUM 10000
