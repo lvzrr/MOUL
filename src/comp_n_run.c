@@ -24,11 +24,14 @@ int compile_and_run(const char *test_file, const char *func_file, const char *ou
 
 	snprintf(python_command, sizeof(python_command), "python3 %sscripts/testheaders.py %d %s", moul_dir , n_cheat, func_file);
 	result = system(python_command);
-
-	if (result != 0)
+	switch (result)
 	{
-		libft_printf_err("\n\t\t\e[1;91mCHEATS DETECTED\e[0m\n\n");
-		return (2);
+		case 1:
+			libft_printf_err("\n\t\t\e[1;91mCHEATS DETECTED\e[0m\n\n");
+			return (2);
+		case 512:
+			libft_printf_err("\n\t\t\e[1;91mEXTRA FILES DETECTED\e[0m\n\n");
+			return (2);
 	}
 
 	snprintf(full_test_file, sizeof(full_test_file), "%s%s", moul_dir, test_file);

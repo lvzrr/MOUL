@@ -1,8 +1,19 @@
 import sys
+import os
 
 if __name__ == "__main__":
-	with open(sys.argv[2], "r") as f:
+	file_path = sys.argv[2]
+	dir_path = os.path.dirname(file_path)
+	files_in_dir = os.listdir(dir_path)
+
+	if len(files_in_dir) > 1:
+		exit(2)
+
+	with open(file_path, "r") as f:
 		c = f.read()
+	f.close()
+
+	path = file_path.split("/")
 
 	match sys.argv[1]:
 		case '0':
