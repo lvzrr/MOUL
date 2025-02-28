@@ -35,12 +35,12 @@ int libft_test02(void)
     int r;
     size_t nb_tests = sizeof(_02tests) / sizeof(_02tests[0]);
 
-	// r = system("norminette");
-	// if (r != 0)
-	// {
-	// 	libft_printf_err("\e[1;91m[X]\e[0m ERROR: Check the Norm\n");
-	// 	return (1);
-	// }
+	r = system("norminette");
+	if (r != 0)
+	{
+		libft_printf_err("\e[1;91m[X]\e[0m ERROR: Check the Norm\n");
+		return (1);
+	}
     for (size_t i = 0; i < nb_tests; i++)
     {
         char msg[64];
