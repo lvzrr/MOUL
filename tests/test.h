@@ -14,6 +14,8 @@ char			*ft_strncpy(char *dest, char *src, unsigned int size);
 int				ft_str_is_alpha(char *str);
 int				ft_str_is_numeric(char *str);
 int				ft_str_is_lowercase(char *str);
+int				ft_str_is_uppercase(char *str);
+int				ft_str_is_printable(char *str);
 int				ft_strcmp(char *s1, char *s2);
 int				ft_strncmp(char *s1, char *s2, unsigned int n);
 int				ft_strcat(char *s1, char *s2);

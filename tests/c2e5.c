@@ -34,8 +34,8 @@ int main(void)
         }
         test_str[len] = '\0';
         
-        libft_result = libft_str_is_lowercase(test_str);
-        c2e4_result = ft_str_is_lowercase(test_str);
+        libft_result = libft_str_is_uppercase(test_str);
+        c2e4_result = ft_str_is_uppercase(test_str);
         
         if (c2e4_result != libft_result) {
             libft_printf_err("\n\t\t\e[1;91mFAILED TEST\e[0m\n\t\t\texpected: %d\n\t\t\tgot: %d\n\t\t\tstr: %s\n\n", libft_result, c2e4_result, test_str);
