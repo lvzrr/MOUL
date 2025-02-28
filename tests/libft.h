@@ -31,7 +31,6 @@ int				libft_strlcat(char *dst, char *src, unsigned int size);
 int				libft_strncmp(char *s1, char *s2, int size);
 int				libft_str_is_alpha(char *s);
 int				libft_str_is_numeric(char *s);
-int             libft_str_is_lowercase(char *str);
 char			*libft_gen_rand_str(unsigned int max_size);
 void			libft_putchar(char c);
 void			libft_print_err(char *str);
@@ -45,5 +44,6 @@ unsigned int	libft_strlen(char *src);
 
 int				libft_test01(void);
 int				libft_test02(void);
+int				libft_test03(void);
 int				compile_and_run(const char *tf, const char *ff, const char *ob);
 #endif
