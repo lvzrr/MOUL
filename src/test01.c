@@ -31,8 +31,8 @@ int libft_test01(void)
 	if (r != 0)
 	{
 		libft_printf_err("\e[1;91m[X]\e[0m ERROR: Check the Norm\n");
-	// 	return (1);
-	// }
+		return (1);
+	 }
     for (size_t i = 0; i < nb_tests; i++)
     {
         char msg[64];
