@@ -19,7 +19,7 @@ int (*_03tests[])(void) = {
 int libft_test03(void)
 {
     int r;
-    size_t nb_tests = sizeof(_02tests) / sizeof(_02tests[0]);
+    size_t nb_tests = sizeof(_03tests) / sizeof(_03tests[0]);
 
 	// r = system("norminette");
 	// if (r != 0)
