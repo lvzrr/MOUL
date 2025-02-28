@@ -39,5 +39,5 @@ unsigned int	libft_strlcpy(char *dest, char *src, unsigned int size);
 int				libft_test01(void);
 int				libft_test02(void);
 int				libft_test03(void);
-int				compile_and_run(const char *tf, const char *ff, const char *ob);
+int				compile_and_run(const char *tf, const char *ff, const char *ob, int nc);
 #endif

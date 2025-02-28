@@ -1,14 +1,14 @@
 #include "libft.h"
 
-int _01ex00(void) { return compile_and_run("tests/c1e0.c", "ex00/ft_ft.c", "c1e0"); }
-int _01ex01(void) { return compile_and_run("tests/c1e1.c", "ex01/ft_ultimate_ft.c", "c1e1"); }
-int _01ex02(void) { return compile_and_run("tests/c1e2.c", "ex02/ft_swap.c", "c1e2"); }
-int _01ex03(void) { return compile_and_run("tests/c1e3.c", "ex03/ft_div_mod.c", "c1e3"); }
-int _01ex04(void) { return compile_and_run("tests/c1e4.c", "ex04/ft_ultimate_div_mod.c", "c1e4"); }
-int _01ex05(void) { return compile_and_run("tests/c1e5.c", "ex05/ft_putstr.c", "c1e5"); }
-int _01ex06(void) { return compile_and_run("tests/c1e6.c", "ex06/ft_strlen.c", "c1e6"); }
-int _01ex07(void) { return compile_and_run("tests/c1e7.c", "ex07/ft_rev_int_tab.c", "c1e7"); }
-int _01ex08(void) { return compile_and_run("tests/c1e8.c", "ex08/ft_sort_int_tab.c", "c1e8"); }
+int _01ex00(void) { return compile_and_run("tests/c1e0.c", "./ex00/ft_ft.c", "c1e0", 0); }
+int _01ex01(void) { return compile_and_run("tests/c1e1.c", "./ex01/ft_ultimate_ft.c", "c1e1", 0); }
+int _01ex02(void) { return compile_and_run("tests/c1e2.c", "./ex02/ft_swap.c", "c1e2", 0); }
+int _01ex03(void) { return compile_and_run("tests/c1e3.c", "./ex03/ft_div_mod.c", "c1e3", 0); }
+int _01ex04(void) { return compile_and_run("tests/c1e4.c", "./ex04/ft_ultimate_div_mod.c", "c1e4", 0); }
+int _01ex05(void) { return compile_and_run("tests/c1e5.c", "./ex05/ft_putstr.c", "c1e5", 1); }
+int _01ex06(void) { return compile_and_run("tests/c1e6.c", "./ex06/ft_strlen.c", "c1e6", 0); }
+int _01ex07(void) { return compile_and_run("tests/c1e7.c", "./ex07/ft_rev_int_tab.c", "c1e7", 0); }
+int _01ex08(void) { return compile_and_run("tests/c1e8.c", "./ex08/ft_sort_int_tab.c", "c1e8", 0); }
 
 int (*_01tests[])(void) = {
     _01ex00,

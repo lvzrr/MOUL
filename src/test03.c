@@ -1,11 +1,11 @@
 #include "libft.h"
 
-int _03ex00(void) { return compile_and_run("tests/c3e0.c", "ex00/ft_strcmp.c", 	"c3e0"); }
-int _03ex01(void) { return compile_and_run("tests/c3e1.c", "ex01/ft_strncmp.c", "c3e1"); }
-int _03ex02(void) { return compile_and_run("tests/c3e2.c", "ex02/ft_strcat.c", 	"c3e2"); }
-int _03ex03(void) { return compile_and_run("tests/c3e3.c", "ex03/ft_strncat.c", "c3e3"); }
-int _03ex04(void) { return compile_and_run("tests/c3e4.c", "ex04/ft_strstr.c", 	"c3e4"); }
-int _03ex05(void) { return compile_and_run("tests/c3e5.c", "ex05/ft_strlcat.c", "c3e5"); }
+int _03ex00(void) { return compile_and_run("tests/c3e0.c", "ex00/ft_strcmp.c", "c3e0", 0); }
+int _03ex01(void) { return compile_and_run("tests/c3e1.c", "ex01/ft_strncmp.c", "c3e1", 0); }
+int _03ex02(void) { return compile_and_run("tests/c3e2.c", "ex02/ft_strcat.c", "c3e2", 0); }
+int _03ex03(void) { return compile_and_run("tests/c3e3.c", "ex03/ft_strncat.c", "c3e3", 0); }
+int _03ex04(void) { return compile_and_run("tests/c3e4.c", "ex04/ft_strstr.c", "c3e4", 0); }
+int _03ex05(void) { return compile_and_run("tests/c3e5.c", "ex05/ft_strlcat.c", "c3e5", 0); }
 
 int (*_03tests[])(void) = {
     _03ex00,
