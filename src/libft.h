@@ -20,6 +20,8 @@ int				libft_strlcat(char *dst, char *src, unsigned int size);
 int				libft_strncmp(char *s1, char *s2, int size);
 int				libft_str_is_alpha(char *s);
 int				libft_str_is_numeric(char *s);
+int				libft_str_is_lowercase(char *s);
+int				libft_str_is_uppercase(char *s);
 char			*libft_gen_rand_str(unsigned int max_size);
 void			libft_putchar(char c);
 void			libft_print_err(char *str);
