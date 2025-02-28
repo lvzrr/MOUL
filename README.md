@@ -1,6 +1,6 @@
 # MOUL
 
-An C implementation for the C piscine at 42.
+An C tester for the C piscine at 42.
 
 ## INSTALL
 
