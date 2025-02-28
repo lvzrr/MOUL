@@ -39,7 +39,7 @@ int libft_test03(void)
             libft_printf_err("\e[1;91m[ex0%d]: KO\e[0m\n", i);
             return r;
         }
-        snprintf(msg, sizeof(msg), "\e[1;92m[+]\e[0m Tests for ex0%zu passed!\n\n\n", i);
+		snprintf(msg, sizeof(msg), "\e[1;92m[+]\e[0m Tests for ex%02zu passed!\n\n\n", i);
         libft_putstr(msg);
     }
     return 0;
