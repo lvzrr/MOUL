@@ -23,6 +23,7 @@ int				libft_str_is_numeric(char *s);
 int				libft_str_is_lowercase(char *s);
 int				libft_str_is_uppercase(char *s);
 int				libft_str_is_printable(char *s);
+char			*libft_strcapitalize(char *str);
 char			*libft_gen_rand_str(unsigned int max_size);
 void			libft_putchar(char c);
 void			libft_print_err(char *str);
@@ -33,6 +34,7 @@ void			libft_putstr_err(char *str);
 void			libft_putnbr(int nbr);
 void			libft_putnbr_err(int nbr);
 unsigned int	libft_strlen(char *src);
+unsigned int	libft_strlcpy(char *dest, char *src, unsigned int size);
 
 int				libft_test01(void);
 int				libft_test02(void);
