@@ -15,6 +15,8 @@ int	main(int argc, char **argv)
 			return libft_test01();
 		case 2:
 			return libft_test02();
+		case 3:
+			return libft_test03();
 	}
 	return (0);
 }
