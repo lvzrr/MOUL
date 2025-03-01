@@ -24,7 +24,7 @@ int main()
 		c2 = 0;
 		l = rand() % 100;
 		while (c2 < l) {
-			s[c2++] = 20 + rand() % 235;
+			s[c2++] = ' '+ rand() % 95;
 		}
 		s[c2] = '\0'; 
 		r = ft_strcpy(d, s);

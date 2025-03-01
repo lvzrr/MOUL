@@ -14,7 +14,7 @@ int	main(void)
 		char *cpy = (char *)malloc(101 * sizeof(char));
 		while (c2 < l)
 		{
-			int t = 1 + rand() % 254;
+			int t = ' ' + rand() % 95;
 			str[c2] = t;
 			cpy[c2++] = t;
 		}

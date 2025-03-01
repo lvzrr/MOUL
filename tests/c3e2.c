@@ -12,13 +12,13 @@ int	main()
 		int l = rand() % 49;
 		int c2 = 0;
 		while (c2 < l)
-			src[c2++] = 1 + rand() % 244;
+			src[c2++] = ' ' + rand() % 95;
 		src[c2] = 0;
 		l = rand() % 49;
 		c2 = 0;
 		while (c2 < l)
 		{
-			dst[c2] = 1 + rand() % 244;
+			dst[c2] = ' ' + rand() % 95;
 			dst2[c2] = dst[c2];
 			c2++;
 		}

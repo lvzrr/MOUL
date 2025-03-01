@@ -12,7 +12,7 @@ int	main(void)
 		int c2 = 0;
 		char *str = (char *)malloc(101 * sizeof(char));
 		while (c2 < l)
-			str[c2++] = 1 + rand() % 254;
+			str[c2++] = ' ' + rand() % 95;
 		str[c2] = 0;
 		int lib_res = libft_str_is_printable(str);
 		int ft_res = ft_str_is_printable(str);

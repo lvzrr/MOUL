@@ -16,7 +16,7 @@ int main(void)
 		c++;
 		c2 = 0;
 		while(c2 < l)
-			s[c2++] = 10 + rand() % 245;
+			s[c2++] = ' ' + rand() % 95;
 		s[c2] = '\0';
 		if (ft_str_is_numeric(s) != libft_str_is_numeric(s))
 		{

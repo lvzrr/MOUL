@@ -13,7 +13,7 @@ int	main(void)
 		int l = rand() % 100;
 		int c2 = 0;
 		while (c2 < l)
-			c[c2++] =  1 + rand() % 254;
+			c[c2++] =  ' ' + rand() % 95;
 		c[l] = '\0';
 		int s = rand() % 100;
 		ft_strlcpy(o,c,s);

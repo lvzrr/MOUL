@@ -13,8 +13,8 @@ int	main()
 		{
 			while (w < l)
 			{
-				s1[w] = 1 + rand() % 241;
-				s2[w] = 1 + rand() % 241;
+				s1[w] = ' ' + rand() % 95;
+				s2[w] = ' ' + rand() % 95;
 				w++;
 			}
 		}
@@ -22,7 +22,7 @@ int	main()
 		{
 			while (w < l)
 			{
-				s1[w] = 1 + rand() % 241;
+				s1[w] = ' ' + rand() % 95;
 				s2[w] = s1[w];
 				w++;
 			}

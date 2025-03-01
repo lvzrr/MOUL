@@ -22,7 +22,7 @@ int main()
 		c2 = 0;
 		l = rand() % 100;
 		while (c2 < l) {
-			d[c2++] = 20 + rand() % 235;
+			d[c2++] = ' ' + rand() % 95;
 		}
 		d[c2] = '\0';
 		if (libft_str_is_alpha(d) != ft_str_is_alpha(d))

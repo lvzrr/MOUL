@@ -11,7 +11,7 @@ int	main()
 		int m = 0;
 		while (m < l)
 		{
-			s[m] = 1 + rand() % 244;
+			s[m] = ' ' + rand() % 95;
 			o[m] = s[m];
 			m++;
 		}
