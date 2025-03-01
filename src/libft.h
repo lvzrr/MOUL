@@ -6,11 +6,13 @@
 #include <stdarg.h>
 #include <unistd.h>
 #include <stdlib.h>
+#include <pthread.h>
 #include <stdio.h>
 #include <string.h>
 #include <time.h>
 #include <glob.h>
 #include <sys/wait.h>
+#include <fcntl.h>
 
 #define TESTNUM 500000
 #define TESTPASSED 0
