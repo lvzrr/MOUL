@@ -13,14 +13,30 @@ int compile_and_run(const char *test_file, const char *func_file, const char *ou
 		libft_printf_err("error: moul environment variable is not set.\n");
 		return (1);
 	}
+	
 
 	char full_test_file[512];
 	char full_func_file[512];
 	char full_output_bin[512];
 	char full_lib_bin[512];
 	char rm_bin[512];
-
 	char python_command[1024];
+
+	snprintf(full_test_file, sizeof(full_test_file), "%s%s", moul_dir, test_file);
+	snprintf(full_lib_bin, sizeof(full_lib_bin), "%s/%s", lib_dir, "libft_*.o");
+	snprintf(full_func_file, sizeof(full_func_file), "./%s", func_file);
+	snprintf(full_output_bin, sizeof(full_output_bin), "%s/%s", out_dir, output_bin);
+
+	if (access(full_test_file, F_OK) == -1)
+	{
+		libft_printf_err("\n\t\t\e[1;91mNO TEST IMPLEMENTED\e[0m\n\n");
+		return (2);
+	}
+	if (access(full_func_file, F_OK) == -1)
+	{
+		libft_printf_err("\n\t\t\e[1;91mNO FILES FOUND\e[0m\n\n");
+		return (2);
+	}
 
 	snprintf(python_command, sizeof(python_command), "python3 %sscripts/testheaders.py %d %s", moul_dir , n_cheat, func_file);
 	result = system(python_command);
@@ -37,11 +53,6 @@ int compile_and_run(const char *test_file, const char *func_file, const char *ou
 				break;
 		}
 	}
-
-	snprintf(full_test_file, sizeof(full_test_file), "%s%s", moul_dir, test_file);
-	snprintf(full_lib_bin, sizeof(full_lib_bin), "%s/%s", lib_dir, "libft_*.o");
-	snprintf(full_func_file, sizeof(full_func_file), "./%s", func_file);
-	snprintf(full_output_bin, sizeof(full_output_bin), "%s/%s", out_dir, output_bin);
 
 	size_t command_len = snprintf(command, sizeof(command),
 		"cc -Wall -Wextra -Werror %s %s %s -o %s",
