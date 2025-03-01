@@ -6,7 +6,7 @@ int	main(int argc, char **argv)
 
 if (argc < 2)
 	{
-		libft_printf("\nUsage: ./program [options]\n");
+		libft_printf("\nUsage: moul [options]\n");
 		libft_printf("Options:\n");
 		libft_printf("  0 - No tests\n");
 		libft_printf("  1 - Run _01tests (9 cases)\n");
@@ -20,7 +20,7 @@ if (argc < 2)
 
 	if (libft_strcmp(argv[1], "help") == 0)
 	{
-		libft_printf("\nUsage: ./program [options]\n");
+		libft_printf("\nUsage: moul [options]\n");
 		libft_printf("Options:\n");
 		libft_printf("  0 - No tests\n");
 		libft_printf("  1 - Run _01tests (9 cases)\n");
