@@ -24,11 +24,12 @@ int	main()
 		}
 		dst[c2] = 0;
 		dst2[c2] = 0;
-		char *got = ft_strcat(dst, src);
-		char *ex = libft_strcat(dst2, src);
-		if (libft_strcmp(ex, got)!=0)
+		int n = rand() % 49;
+		char *got = ft_strncat(dst, src, n);
+		char *ex = libft_strncat(dst2, src, n);
+		if (libft_strcmp(ex,got)!=0)
 		{
-			libft_printf_err("\n\t\t\e[1;91mTEST FAILED\e[0m:\n\t\t\texpected: %s\n\t\t\tgot: %s\n\t\t\tsrc:  %s\n\n",ex, got, src);
+			libft_printf_err("\n\t\t\e[1;91mTEST FAILED\e[0m:\n\t\t\texpected: %d\n\t\t\tgot: %s\n\t\t\tsrc:  %s\n\t\t\tsize: %d\n\n",ex, got, src, n);
 			free(src);
 			free(dst);
 			free(dst2);

@@ -27,6 +27,8 @@ int				libft_str_is_lowercase(char *s);
 int				libft_str_is_uppercase(char *s);
 int				libft_str_is_printable(char *s);
 char			*libft_strcapitalize(char *str);
+char			*libft_strncat(char *dst, char *src, unsigned int size);
+char			*libft_strcat(char *dst, char *src);
 char			*libft_gen_rand_str(unsigned int max_size);
 void			libft_putchar(char c);
 void			libft_print_err(char *str);
