@@ -10,9 +10,12 @@
 #include <string.h>
 #include <time.h>
 #include <glob.h>
+#include <sys/wait.h>
 
-#define TESTNUM 1000000
+#define TESTNUM 100000
 #define TESTPASSED 0
+
+typedef int (*t_func)(void);
 
 int				libft_atoi(char *str);
 int				libft_strcmp(const char *s1, const char *s2);
@@ -36,8 +39,44 @@ void			libft_putnbr_err(int nbr);
 unsigned int	libft_strlen(char *src);
 unsigned int	libft_strlcpy(char *dest, char *src, unsigned int size);
 
-int				libft_test01(void);
-int				libft_test02(void);
-int				libft_test03(void);
+int				libft_test(t_func f[], unsigned int size);
 int				compile_and_run(const char *tf, const char *ff, const char *ob, int nc);
+
+int _01ex00(void);
+int _01ex01(void);
+int _01ex02(void);
+int _01ex03(void);
+int _01ex04(void);
+int _01ex05(void);
+int _01ex06(void);
+int _01ex07(void);
+int _01ex08(void);
+
+extern t_func _01tests[];
+
+int _02ex00(void);
+int _02ex01(void);
+int _02ex02(void);
+int _02ex03(void);
+int _02ex04(void);
+int _02ex05(void);
+int _02ex06(void);
+int _02ex07(void);
+int _02ex08(void);
+int _02ex09(void);
+int _02ex10(void);
+int _02ex11(void);
+int _02ex12(void);
+
+extern t_func _02tests[];
+
+int _03ex00(void);
+int _03ex01(void);
+int _03ex02(void);
+int _03ex03(void);
+int _03ex04(void);
+int _03ex05(void);
+
+extern t_func _03tests[];
+
 #endif

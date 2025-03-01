@@ -12,11 +12,11 @@ int	main(int argc, char **argv)
 		case 0:
 			break;
 		case 1:
-			return libft_test01();
+			return libft_test(_01tests, 9);
 		case 2:
-			return libft_test02();
+			return libft_test(_02tests, 13);
 		case 3:
-			return libft_test03();
+			return libft_test(_03tests, 6);
 	}
 	return (0);
 }

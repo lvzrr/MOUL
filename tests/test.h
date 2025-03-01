@@ -20,6 +20,7 @@ char			*ft_strupcase(char *str);
 char			*ft_strcapitalize(char *str);
 char			*ft_strlowcase(char *str);
 int				ft_strncmp(char *s1, char *s2, unsigned int n);
+int				ft_strcmp(char *s1, char *s2);
 int				ft_strcat(char *s1, char *s2);
 int				ft_strncat(char *s1, char *s2, unsigned int n);
 char			*ft_strstr(char *haystack, char *needle);
