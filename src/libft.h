@@ -12,7 +12,7 @@
 #include <glob.h>
 #include <sys/wait.h>
 
-#define TESTNUM 100000
+#define TESTNUM 500000
 #define TESTPASSED 0
 
 typedef int (*t_func)(void);

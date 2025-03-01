@@ -7,7 +7,7 @@ int	main()
 	{
 		char *s1 = (char *)malloc(101 * sizeof(char));
 		char *s2 = (char *)malloc(101 * sizeof(char));
-		int l = rand() % 100;
+		int l = 1 + rand() % 100;
 		int w = 0;
 		if (rand() % 2 == 0)
 		{

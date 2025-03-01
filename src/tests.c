@@ -71,12 +71,14 @@ int (*_03tests[])(void) = {
 int libft_test(t_func tests[], unsigned int size)
 {
     int r;
+	libft_printf("\n\n\e[1;93m[?]\e[0m RUNNING NORMINETTE\n\n");
 	r = system("norminette");
 	if (r != 0)
 	{
 		libft_printf_err("\e[1;91m[X]\e[0m ERROR: Check the Norm\n");
 		return (1);
 	}
+	libft_printf("\n\n\e[1;92m[+] PASSED NORMINETTE\e[0m\n\n");
     for (size_t i = 0; i < size; i++)
     {
         char msg[64];
