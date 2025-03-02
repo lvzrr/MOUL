@@ -6,7 +6,7 @@
 				██║ ╚═╝ ██║╚██████╔╝╚██████╔╝███████╗
 				╚═╝     ╚═╝ ╚═════╝  ╚═════╝ ╚══════╝
 											
-											A Moulinette Wannabe
+									A Moulinette Wannabe
 ```
 
 ## INSTALL
