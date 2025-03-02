@@ -84,6 +84,31 @@ _04ex04,
 _04ex05,
 };
 
+
+int _05ex00(void) { return compile_and_run("tests/c5e0.c", "./ex00/ft_iterative_factorial.c", "c5e0", 0); }
+int _05ex01(void) { return compile_and_run("tests/c5e1.c", "./ex01/ft_recursive_factorial.c", "c5e1", 0); }
+int _05ex02(void) { return compile_and_run("tests/c5e2.c", "./ex02/ft_iterative_power.c", "c5e2", 0); }
+int _05ex03(void) { return compile_and_run("tests/c5e3.c", "./ex03/ft_recursive_power.c", "c5e3", 0); }
+int _05ex04(void) { return compile_and_run("tests/c5e4.c", "./ex04/ft_fibonacci.c", "c5e4", 0); }
+int _05ex05(void) { return compile_and_run("tests/c5e5.c", "./ex05/ft_sqrt.c", "c5e5", 1); }
+int _05ex06(void) { return compile_and_run("tests/c5e6.c", "./ex06/ft_is_prime.c", "c5e6", 0); }
+int _05ex07(void) { return compile_and_run("tests/c5e7.c", "./ex07/ft_find_next_prime.c", "c5e7", 0); }
+int _05ex08(void) { return compile_and_run("tests/c5e8.c", "./ex08/ft_ten_queens_puzzle.c", "c5e8", 0); }
+
+int (*_05tests[])(void) = {
+_05ex00,
+_05ex01,
+_05ex02,
+_05ex03,
+_05ex04,
+_05ex05,
+_05ex06,
+_05ex07,
+_05ex08
+};
+
+
+
 void print_summary(int grade, struct timeval start_time, int size)
 {
 	struct timeval end_time;

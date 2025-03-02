@@ -21,6 +21,8 @@
 typedef int (*t_func)(void);
 
 int				libft_atoi(char *str);
+int				libft_factorial(int n);
+int				libft_power(int n, int x);
 int				libft_strcmp(const char *s1, const char *s2);
 int				libft_strlcat(char *dst, char *src, unsigned int size);
 int				libft_strncmp(char *s1, char *s2, int size);
@@ -92,5 +94,18 @@ int _04ex04(void);
 int _04ex05(void);
 
 extern t_func _04tests[];
+
+
+int _05ex00(void);
+int _05ex01(void);
+int _05ex02(void);
+int _05ex03(void);
+int _05ex04(void);
+int _05ex05(void);
+int _05ex06(void);
+int _05ex07(void);
+int _05ex08(void);
+
+extern t_func _05tests[];
 
 #endif
