@@ -102,8 +102,9 @@ int libft_test(t_func tests[], unsigned int size)
 	for (size_t i = 0; i < size; i++)
 	{
 		char msg[64];
-		snprintf(msg, sizeof(msg), "\e[1;93m[?]\e[0m Running tests for ex0%zu...\n", i);
-		libft_putstr(msg);
+		snprintf(msg, sizeof(msg), "\e[1;93m[?]\e[0m Running ex%02zu...\r",i);
+		printf(msg);
+		fflush(stdout);
 
 		r = tests[i]();
 		if (r == 1)
@@ -121,7 +122,8 @@ int libft_test(t_func tests[], unsigned int size)
 		else
 		{
 			snprintf(msg, sizeof(msg), "\e[1;92m[+]\e[0m Tests for ex%02zu passed!\n\n\n", i);
-			libft_putstr(msg);
+			printf(msg);
+			fflush(stdout);
 			grade += (100 / size);
 		}
 	}

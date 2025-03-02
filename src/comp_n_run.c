@@ -62,14 +62,12 @@ int compile_and_run(const char *test_file, const char *func_file, const char *ou
 		libft_printf_err("error: command too long to fit in the buffer (compilation).\n");
 		return (1);
 	}
-	libft_printf("\tcompiling...\r");
 	result = system(command);
 	if (result != 0)
 	{
 		libft_printf_err("error: compilation of %s failed.\n", func_file);
 		return (1);
 	}
-	libft_printf("\trunning: %s\n", full_output_bin);
 	result = system(full_output_bin);
 	if (result != TESTPASSED)
 	{

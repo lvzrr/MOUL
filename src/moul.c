@@ -1,10 +1,20 @@
 #include "libft.h"
 
+const char *banner = 
+"\n\n\t███╗░░░███╗░█████╗░██╗░░░██╗██╗░░░░░\n"
+"\t████╗░████║██╔══██╗██║░░░██║██║░░░░░\n"
+"\t██╔████╔██║██║░░██║██║░░░██║██║░░░░░\n"
+"\t██║╚██╔╝██║██║░░██║██║░░░██║██║░░░░░\n"
+"\t██║░╚═╝░██║╚█████╔╝╚██████╔╝███████╗\n"
+"\t╚═╝░░░░░╚═╝░╚════╝░░╚═════╝░╚══════╝\n\n";
+
 int	main(int argc, char **argv)
 {
+	
+	libft_printf("%s\n\t\t\t\tAuthors: jaicastr, cruiz-go", banner);
 	int	level;
 
-if (argc < 2)
+	if (argc < 2)
 	{
 		libft_printf("\nUsage: moul [options]\n");
 		libft_printf("Options:\n");
