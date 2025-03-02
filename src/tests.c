@@ -11,15 +11,15 @@ int _01ex07(void) { return compile_and_run("tests/c1e7.c", "./ex07/ft_rev_int_ta
 int _01ex08(void) { return compile_and_run("tests/c1e8.c", "./ex08/ft_sort_int_tab.c", "c1e8", 0); }
 
 int (*_01tests[])(void) = {
-    _01ex00,
-    _01ex01,
-    _01ex02,
-    _01ex03,
-    _01ex04,
-    _01ex05,
-    _01ex06,
-    _01ex07,
-    _01ex08
+_01ex00,
+_01ex01,
+_01ex02,
+_01ex03,
+_01ex04,
+_01ex05,
+_01ex06,
+_01ex07,
+_01ex08
 };
 
 int _02ex00(void) { return compile_and_run("tests/c2e0.c", "ex00/ft_strcpy.c", "c2e0", 0); }
@@ -37,19 +37,19 @@ int _02ex11(void) { return compile_and_run("tests/c2e11.c", "ex11/ft_putstr_non_
 int _02ex12(void) { return compile_and_run("tests/c2e12.c", "ex12/ft_print_memory.c", "c2e12", 1); }
 
 int (*_02tests[])(void) = {
-    _02ex00,
-    _02ex01,
-    _02ex02,
-    _02ex03,
-    _02ex04,
-    _02ex05,
-    _02ex06,
-    _02ex07,
-    _02ex08,
-	_02ex09,
-	_02ex10,
-	_02ex11,
-	_02ex12
+_02ex00,
+_02ex01,
+_02ex02,
+_02ex03,
+_02ex04,
+_02ex05,
+_02ex06,
+_02ex07,
+_02ex08,
+_02ex09,
+_02ex10,
+_02ex11,
+_02ex12
 };
 
 int _03ex00(void) { return compile_and_run("tests/c3e0.c", "ex00/ft_strcmp.c", "c3e0", 0); }
@@ -60,17 +60,37 @@ int _03ex04(void) { return compile_and_run("tests/c3e4.c", "ex04/ft_strstr.c", "
 int _03ex05(void) { return compile_and_run("tests/c3e5.c", "ex05/ft_strlcat.c", "c3e5", 0); }
 
 int (*_03tests[])(void) = {
-    _03ex00,
-    _03ex01,
-    _03ex02,
-    _03ex03,
-    _03ex04,
-    _03ex05,
+_03ex00,
+_03ex01,
+_03ex02,
+_03ex03,
+_03ex04,
+_03ex05,
 };
+
+void print_summary(int grade, struct timeval start_time, int size)
+{
+	struct timeval end_time;
+	gettimeofday(&end_time, NULL);
+	double elapsed_time = (end_time.tv_sec - start_time.tv_sec) +
+	                      (end_time.tv_usec - start_time.tv_usec) / 1000000.0;
+
+	libft_printf("\n+--------------- SUMMARY ---------------+\n");
+	printf("Total Runtime: %.4f seconds\n", elapsed_time);
+	fflush(stdout);
+	libft_printf("Total Tests: %d\n", TESTNUM * size);
+	if (grade >= 50)
+		libft_printf("\e[42;30m Final Grade: %d \e[0m\n\n", grade);
+	else
+		libft_printf("\e[41;30m Final Grade: %d \e[0m\n\n", grade);
+}
 
 int libft_test(t_func tests[], unsigned int size)
 {
-    int r;
+	int r;
+	int grade = 0;
+	struct timeval start_time;
+	gettimeofday(&start_time, NULL);
 	libft_printf("\n\n\e[1;93m[?]\e[0m RUNNING NORMINETTE\n\n");
 	r = system("norminette");
 	if (r != 0)
@@ -79,20 +99,32 @@ int libft_test(t_func tests[], unsigned int size)
 		return (1);
 	}
 	libft_printf("\n\n\e[1;92m[+] PASSED NORMINETTE\e[0m\n\n");
-    for (size_t i = 0; i < size; i++)
-    {
-        char msg[64];
-        snprintf(msg, sizeof(msg), "\e[1;93m[?]\e[0m Running tests for ex0%zu...\n", i);
-        libft_putstr(msg);
+	for (size_t i = 0; i < size; i++)
+	{
+		char msg[64];
+		snprintf(msg, sizeof(msg), "\e[1;93m[?]\e[0m Running tests for ex0%zu...\n", i);
+		libft_putstr(msg);
 
-        r = tests[i]();
-        if (r != TESTPASSED)
-        {
-            libft_printf_err("\e[1;91m[ex0%d]: KO\e[0m\n", i);
-            return r;
-        }
-        snprintf(msg, sizeof(msg), "\e[1;92m[+]\e[0m Tests for ex%02zu passed!\n\n\n", i);
-        libft_putstr(msg);
-    }
-    return 0;
+		r = tests[i]();
+		if (r != TESTPASSED)
+		{
+			libft_printf_err("\e[1;91m[ex0%d]: KO\e[0m\n", i);
+			print_summary(grade, start_time, size);
+			return (1);
+		}
+		else if (r == 2)
+		{
+			grade = -42;
+			print_summary(grade, start_time, size);
+			return (1);
+		}
+		else
+		{
+			snprintf(msg, sizeof(msg), "\e[1;92m[+]\e[0m Tests for ex%02zu passed!\n\n\n", i);
+			libft_putstr(msg);
+			grade += (100 / size);
+		}
+	}
+	print_summary(grade, start_time, size);
+	return 0;
 }

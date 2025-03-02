@@ -13,6 +13,7 @@
 #include <glob.h>
 #include <sys/wait.h>
 #include <fcntl.h>
+#include <sys/time.h>
 
 #define TESTNUM 500000
 #define TESTPASSED 0
