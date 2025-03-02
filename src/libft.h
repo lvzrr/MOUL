@@ -84,4 +84,13 @@ int _03ex05(void);
 
 extern t_func _03tests[];
 
+int _04ex00(void);
+int _04ex01(void);
+int _04ex02(void);
+int _04ex03(void);
+int _04ex04(void);
+int _04ex05(void);
+
+extern t_func _04tests[];
+
 #endif

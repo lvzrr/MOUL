@@ -14,6 +14,7 @@
 #include <sys/wait.h>
 #include <fcntl.h>
 #include <sys/time.h>
+#include <limits.h>
 
 #define TESTNUM 500000
 #define TESTPASSED 0

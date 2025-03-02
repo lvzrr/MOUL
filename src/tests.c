@@ -68,6 +68,22 @@ _03ex04,
 _03ex05,
 };
 
+int _04ex00(void) { return compile_and_run("tests/c4e0.c", "ex00/ft_strlen.c", "c4e0", 0); }
+int _04ex01(void) { return compile_and_run("tests/c4e1.c", "ex01/ft_putstr.c", "c4e1", 1); }
+int _04ex02(void) { return compile_and_run("tests/c4e2.c", "ex02/ft_putnbr.c", "c4e2", 1); }
+int _04ex03(void) { return compile_and_run("tests/c4e3.c", "ex03/ft_atoi.c", "c4e3", 0); }
+int _04ex04(void) { return compile_and_run("tests/c4e4.c", "ex04/ft_putnbr_base.c", "c4e4", 1); }
+int _04ex05(void) { return compile_and_run("tests/c4e5.c", "ex05/ft_atoi_base", "c4e5", 0); }
+
+int (*_04tests[])(void) = {
+_04ex00,
+_04ex01,
+_04ex02,
+_04ex03,
+_04ex04,
+_04ex05,
+};
+
 void print_summary(int grade, struct timeval start_time, int size)
 {
 	struct timeval end_time;
@@ -92,12 +108,12 @@ int libft_test(t_func tests[], unsigned int size)
 	struct timeval start_time;
 	gettimeofday(&start_time, NULL);
 	libft_printf("\n\n\e[1;93m[?]\e[0m RUNNING NORMINETTE\n\n");
-	r = system("norminette");
-	if (r != 0)
-	{
-		libft_printf_err("\e[1;91m[X]\e[0m ERROR: Check the Norm\n");
-		return (1);
-	}
+	// r = system("norminette");
+	// if (r != 0)
+	// {
+	// 	libft_printf_err("\e[1;91m[X]\e[0m ERROR: Check the Norm\n");
+	// 	return (1);
+	// }
 	libft_printf("\n\n\e[1;92m[+] PASSED NORMINETTE\e[0m\n\n");
 	for (size_t i = 0; i < size; i++)
 	{

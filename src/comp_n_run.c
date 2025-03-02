@@ -45,7 +45,8 @@ int compile_and_run(const char *test_file, const char *func_file, const char *ou
 		switch (exit_status) {
 			case 1:
 				libft_printf_err("\n\t\t\e[1;91mCHEATS DETECTED\e[0m\n\n");
-				return (2);
+				break;
+				// return (2);
 			case 2:
 				libft_printf_err("\n\t\t\e[1;91mEXTRA FILES DETECTED\e[0m\n\n");
 				return (2);

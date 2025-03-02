@@ -61,6 +61,8 @@ int	main(int argc, char **argv)
 			return libft_test(_02tests, 13);
 		case 3:
 			return libft_test(_03tests, 6);
+		case 4:
+			return libft_test(_04tests, 6);
 		default:
 			libft_putstr("Invalid level. Run with 'help' for usage.\n");
 			return (1);
