@@ -36,6 +36,7 @@ int	main(int argc, char **argv)
 		libft_printf("  1 - Run _01tests (9 cases)\n");
 		libft_printf("  2 - Run _02tests (13 cases)\n");
 		libft_printf("  3 - Run _03tests (6 cases)\n");
+		libft_printf("  x - And so on...\n");
 		libft_printf("  trace - Print trace of the last test\n");
 		libft_printf("  help - Show this message\n\n");
 		return (0);
