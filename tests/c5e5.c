@@ -6,7 +6,7 @@ int main()
 	int c = 0;
 	while (c < TESTNUM)
 	{
-		int n = rand() % 46340;
+		int n = rand() % 46342;
 		int ft = ft_sqrt(n * n);
 		if (ft != n)
 		{
