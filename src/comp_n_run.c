@@ -30,12 +30,12 @@ int compile_and_run(const char *test_file, const char *func_file, const char *ou
 	if (access(full_test_file, F_OK) == -1)
 	{
 		libft_printf_err("\n\t\t\e[1;91mNO TEST IMPLEMENTED\e[0m\n\n");
-		return (2);
+		return (1);
 	}
 	if (access(full_func_file, F_OK) == -1)
 	{
 		libft_printf_err("\n\t\t\e[1;91mNO FILES FOUND\e[0m\n\n");
-		return (2);
+		return (1);
 	}
 
 	snprintf(python_command, sizeof(python_command), "python3 %sscripts/testheaders.py %d %s", moul_dir , n_cheat, func_file);
@@ -74,13 +74,13 @@ int compile_and_run(const char *test_file, const char *func_file, const char *ou
 	if (result != TESTPASSED)
 	{
 		libft_printf_err("error: running %s failed.\n", full_output_bin);
-		return (2);
+		return (1);
 	}
 	snprintf(rm_bin, sizeof(rm_bin), "rm %s/%s", out_dir, output_bin);
 	if(system(rm_bin) != 0)
 	{
 		libft_printf_err("error: deleting %s failed.\n", full_output_bin);
-		return (2);
+		return (1);
 	}
 	return (TESTPASSED);
 }

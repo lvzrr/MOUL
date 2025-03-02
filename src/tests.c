@@ -106,7 +106,7 @@ int libft_test(t_func tests[], unsigned int size)
 		libft_putstr(msg);
 
 		r = tests[i]();
-		if (r != TESTPASSED)
+		if (r == 1)
 		{
 			libft_printf_err("\e[1;91m[ex0%d]: KO\e[0m\n", i);
 			print_summary(grade, start_time, size);
