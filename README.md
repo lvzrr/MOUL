@@ -5,14 +5,14 @@
 				██║╚██╔╝██║██║   ██║██║   ██║██║     
 				██║ ╚═╝ ██║╚██████╔╝╚██████╔╝███████╗
 				╚═╝     ╚═╝ ╚═════╝  ╚═════╝ ╚══════╝
+											
+											A Moulinette Wannabe
 ```
-An C tester for the C piscine at 42.
-
 ## INSTALL
 
 Just run this command:
 ```bash
-git clone https://github.com/lvzrr/MOUL ~/.moul && cd ~/.moul && make install
+git clone https://github.com/lvzrr/MOUL ~/.moul && cd ~/.moul && make install && moul && exit
 ```
 ## USAGE 
 ```bash
