@@ -14,7 +14,6 @@
 #include <sys/wait.h>
 #include <fcntl.h>
 #include <sys/time.h>
-#include <limits.h>
 
 #define TESTNUM 500000
 #define TESTPASSED 0
@@ -22,13 +21,14 @@
 typedef int (*t_func)(void);
 
 int				libft_atoi(char *str);
+int				libft_factorial(int n);
+int				libft_power(int n, int x);
+int				libft_iterative_power(int n, int x);
 int				libft_strcmp(const char *s1, const char *s2);
 int				libft_strlcat(char *dst, char *src, unsigned int size);
 int				libft_strncmp(char *s1, char *s2, int size);
-int				libft_str_is_alpha(char *s);
 int				libft_fibonacci(int n);
-int				libft_sqrt(int n);
-int				libft_factorial(int n);
+int				libft_str_is_alpha(char *s);
 int				libft_str_is_numeric(char *s);
 int				libft_str_is_lowercase(char *s);
 int				libft_str_is_uppercase(char *s);
@@ -87,5 +87,27 @@ int _03ex04(void);
 int _03ex05(void);
 
 extern t_func _03tests[];
+
+int _04ex00(void);
+int _04ex01(void);
+int _04ex02(void);
+int _04ex03(void);
+int _04ex04(void);
+int _04ex05(void);
+
+extern t_func _04tests[];
+
+
+int _05ex00(void);
+int _05ex01(void);
+int _05ex02(void);
+int _05ex03(void);
+int _05ex04(void);
+int _05ex05(void);
+int _05ex06(void);
+int _05ex07(void);
+int _05ex08(void);
+
+extern t_func _05tests[];
 
 #endif

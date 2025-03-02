@@ -64,6 +64,7 @@ int	main(int argc, char **argv)
 		case 4:
 			return libft_test(_04tests, 6);
 		case 5:
+			libft_printf("\n\n\t\t\e[1;91mWARNING\e[0m: SLOW TESTS\n\n");
 			return libft_test(_05tests, 9);
 		default:
 			libft_putstr("Invalid level. Run with 'help' for usage.\n");
