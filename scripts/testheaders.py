@@ -4,7 +4,7 @@ import os
 if __name__ == "__main__":
     file_path = sys.argv[2]
     dir_path = os.path.dirname(file_path)
-    files_in_dir = os.listdir(dir_path)
+    files_in_dir = [f for f in os.listdir('.') if os.path.isfile(f) and not f.endswith('.swp')]
 
     if len(files_in_dir) > 1:
         exit(2)
