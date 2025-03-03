@@ -18,7 +18,6 @@ int main() {
 		int spacelen = (l > 0) ? rand() % (l / 4 + 1) : 0;
 		int signlen = (l > 0) ? rand() % (l / 4 + 1) : 0;
 		int letterlen = (l > 0) ? rand() % (l / 4 + 1) : 0;
-		int numlen = (l > 0) ? rand() % (l / 4 + 1) : 0;
 		int space_count = 0, sign_count = 0, num_count = 0, letter_count = 0;
 		while (c2 < l)
 		{
@@ -28,7 +27,7 @@ int main() {
 			} else if (sign_count < signlen) {
 				str[c2++] = (rand() % 2 == 0) ? '+' : '-';
 				sign_count++;
-			} else if (num_count < numlen) {
+			} else if (num_count < 7) {
 				str[c2++] = '0' + (rand() % 10);
 				num_count++;
 			} else if (letter_count < letterlen) {
