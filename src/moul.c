@@ -101,7 +101,7 @@ int	main(int argc, char **argv)
 		free(filecontents);
 		char	sigout = 0;
 		fflush(stdout);
-		libft_putstr("\n\e[0;107;30mpress intro to exit.\e[0m\n");
+		libft_putstr("\n\e[0;107;30mpress intro to exit.\e[0m");
 		while (sigout != '\n')
 			sigout = getchar();
 		libft_putstr("\033[2J\033[H");
