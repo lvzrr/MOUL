@@ -33,6 +33,7 @@ int	main(int argc, char **argv)
 		libft_printf("  3 - Run _03tests (6 cases)\n");
 		libft_printf("  x - And so on...\n");
 		libft_printf("  trace - Print trace of the last test\n");
+		libft_printf("  update - Pull lastest changes from the repo and recompile\n");
 		libft_printf("  help - Show this message\n\n");
 		return (0);
 	}
@@ -53,6 +54,7 @@ int	main(int argc, char **argv)
 		libft_printf("  3 - Run _03tests (6 cases)\n");
 		libft_printf("  x - And so on...\n");
 		libft_printf("  trace - Print trace of the last test\n");
+		libft_printf("  update - Pull lastest changes from the repo and recompile\n");
 		libft_printf("  help - Show this message\n\n");
 		return (0);
 	}
