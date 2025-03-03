@@ -28,5 +28,11 @@ Just run this command:
 ```bash
 git clone https://github.com/lvzrr/MOUL ~/.moul && cd ~/.moul && make install && source ~/.zshrc && moul help && exit
 ```
+## SUPPORTED TESTS
+
+| EX  | SUPPORTED  |
+|---|---|
+||---|
+
 > [!WARNING] 
-> Make sure you are in the root of your git repo
+> Make sure you are in the root of your git repo when you run it

@@ -9,25 +9,12 @@ int	main()
 		char *s2 = (char *)malloc(101 * sizeof(char));
 		int l = rand() % 100;
 		int w = 0;
-		if (rand() % 2 == 0)
-		{
-			while (w < l)
-			{
-				s1[w] = ' ' + rand() % 95;
-				s2[w] = ' ' + rand() % 95;
-				w++;
-			}
-		}
-		else
-		{
-			while (w < l)
-			{
-				s1[w] = ' ' + rand() % 95;
-				s2[w] = s1[w];
-				w++;
-			}
-		}
+		while (w < l)
+			s1[w++] = ' ' + rand() % 95;
 		s1[w] = 0;
+		int w = 0;
+		while (w < l)
+			s2[w++] = ' ' + rand() % 95;
 		s2[w] = 0;
 		if (c % 100000 == 0)
 			w_trace("Comparing:\n\t%s\n\t%s\n", s1 ,s2);
