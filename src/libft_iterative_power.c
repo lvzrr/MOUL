@@ -1,6 +1,6 @@
 #include "libft.h"
 
-int	ft_iterative_power(int nb, int power)
+int	libft_iterative_power(int nb, int power)
 {
 	int	i;
 
