@@ -1,7 +1,7 @@
 NAME      := moul-bin
 
 CC        := cc
-CFLAGS    := -Wall -Werror -Wextra -O3 -Wno-unused-result
+CFLAGS    := -Wall -Werror -Wextra -O3
 
 SRCDIR    := src
 BUILDDIR  := .bin
