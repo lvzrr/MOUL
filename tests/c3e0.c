@@ -12,7 +12,7 @@ int	main()
 		while (w < l)
 			s1[w++] = ' ' + rand() % 95;
 		s1[w] = 0;
-		int w = 0;
+		w = 0;
 		while (w < l)
 			s2[w++] = ' ' + rand() % 95;
 		s2[w] = 0;
