@@ -27,6 +27,8 @@ int	main()
 		int n = rand() % 30;
 		unsigned int got = ft_strlcat(dst, src, n);
 		unsigned int ex = libft_strlcat(dst2, src, n);
+		if (c % 100000 == 0)
+			w_trace("src: %s\ndst: %s\nreturn: %d\n",src, dst, got);
 		if (ex != got || libft_strcmp(dst, dst2) != 0)
 		{
 			libft_printf_err("\n\t\t\e[1;91mTEST FAILED\e[0m:\n\t\t\texpected: %d\n\t\t\tgot: %d\n\t\t\tsrc:  %s\n\t\t\tdst: %s\n\n",ex, got, src, dst2);

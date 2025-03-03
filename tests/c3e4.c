@@ -35,7 +35,8 @@
 			}
 
 			char *got = ft_strstr(haystack, needle);
-
+			if (c % 100000 == 0)
+				w_trace("Needle: %s\nHaystack: %s\nReturn: %s\n", needle, haystack, got);
 			if (libft_strcmp(needle, got) != 0) {
 				libft_printf_err("\n\t\t\e[1;91mTEST FAILED\e[0m:\n\t\t\texpected: %s\n\t\t\tgot: %s\n\t\t\thaystack:  %s\n\n", needle, got, haystack);
 				free(haystack);

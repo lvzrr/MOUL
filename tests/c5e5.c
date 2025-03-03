@@ -11,10 +11,16 @@ int main()
 		if (c % 10 == 0)
 		{
 			ft = ft_sqrt(-(n * n));
+			if (c % 100000 == 0)
+				w_trace("sqrt(%d) -> %d (expected: %d)\n", -n * n, ft, 0);
 			n = 0;
 		}
 		else 
+		{
 			ft = ft_sqrt(n * n);
+			if (c % 1000000 == 0)
+				w_trace("sqrt(%d) -> %d (expected: %d)\n", n * n, ft, n);
+		}
 		if (n == 46341)
 			n = 0;
 		if (ft != n)

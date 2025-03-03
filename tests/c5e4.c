@@ -9,6 +9,8 @@ int main()
 		int n = rand() % 20;
 		int ft = ft_fibonacci(n);
 		int lib = libft_fibonacci(n);
+		if (c % 100000 == 0)
+			w_trace("Fib(%d) -> %d (expected: %d)\n", n, ft, lib);
 		if (ft != lib)
 		{
 			libft_printf_err("\n\t\t\e[1;91mFAILED TEST\e[0m:\n\t\t\texpected: %d\n\t\t\tgot: %d\n\t\t\tnum: %d\n\n", lib, ft, n);

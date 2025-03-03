@@ -9,6 +9,8 @@ int main()
 		int exp = rand() % 5;
 		int ft = ft_iterative_power(base, exp);
 		int lib = libft_iterative_power(base, exp);
+		if (c % 100000 == 0)
+			w_trace("pow(%d, %d) -> %d (Expected %d)\n", base, exp, ft, lib);
 		if (ft != lib)
 		{
 			libft_printf_err("\n\t\t\e[1;91mFAILED TEST\e[0m:\n\t\t\texpected: %d\n\t\t\tgot: %d\n\t\t\tbase: %d\n\t\t\texp: %d\n\n", lib, ft, base, exp);

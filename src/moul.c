@@ -13,6 +13,8 @@ int	main(int argc, char **argv)
 	
 	int	level;
 
+	libft_putstr("\033[2J");
+
 	if (argc < 2)
 	{
 		libft_printf("Usage: moul [options]\n");
@@ -96,7 +98,7 @@ int	main(int argc, char **argv)
 	level = libft_atoi(argv[1]);
 	w_trace(banner);
 	w_trace("\t\t\t\t\tA Moulinette Wannabe\n\n");
-	w_trace("========STARTING JOB FOR C%02d========\n",level);
+	w_trace("\n\n============STARTING JOB FOR C%02d============\n\n",level);
 	switch (level)
 	{
 		case 0:

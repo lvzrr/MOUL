@@ -23,7 +23,7 @@ int compile_and_run(const char *test_file, const char *func_file, const char *ou
 
 	snprintf(full_test_file, sizeof(full_test_file), "%s%s", moul_dir, test_file);
 	snprintf(full_lib_bin, sizeof(full_lib_bin), "%s/%s", lib_dir, "libft_*.o");
-	snprintf(full_func_file, sizeof(full_func_file), "./%s", func_file);
+	snprintf(full_func_file, sizeof(full_func_file), "%s", func_file);
 	snprintf(full_output_bin, sizeof(full_output_bin), "%s/%s", out_dir, output_bin);
 
 	w_trace("\e[1;93m[?]\e[0m Ensuring test file exists...\n");
@@ -73,7 +73,7 @@ int compile_and_run(const char *test_file, const char *func_file, const char *ou
 		libft_printf_err("error: compilation of %s failed.\n", func_file);
 		return (1);
 	}
-	w_trace("\n\n\e[1;91m===========RUNNING FILE %s (%s)===========\e[0m\n\n", full_output_bin, full_func_file);
+	w_trace("\n\n\e[1;92m[+] %s COMPILED AND LINKED, RUNNING\e[0m\n\n", full_func_file);
 	result = system(full_output_bin);
 	if (result != TESTPASSED)
 	{

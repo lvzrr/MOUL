@@ -29,6 +29,8 @@ int	main()
 		}
 		s1[w] = 0;
 		s2[w] = 0;
+		if (c % 100000 == 0)
+			w_trace("Comparing:\n\t%s\n\t%s\n", s1 ,s2);
 		int ft_res = ft_strcmp(s1, s2);
 		int l_res = libft_strcmp(s1, s2);
 		if (ft_res != l_res)

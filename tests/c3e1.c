@@ -31,6 +31,8 @@ int	main()
 		s2[w] = 0;
 		int r = rand() % l;
 		int ft_res = ft_strncmp(s1, s2, r);
+		if (c % 100000 == 0)
+			w_trace("s1: %s\ns2: %s\nn: %d\nresult: %d\n", s1, s2, r, ft_res);
 		int l_res = libft_strncmp(s1, s2, r);
 		if (ft_res != l_res)
 		{

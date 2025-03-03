@@ -25,6 +25,8 @@ int	main()
 		dst[c2] = 0;
 		dst2[c2] = 0;
 		char *got = ft_strcat(dst, src);
+		if (c % 100000 == 0)
+			w_trace("src: %s\nresult: %s\n", src, dst);
 		char *ex = libft_strcat(dst2, src);
 		if (libft_strcmp(ex, got)!=0)
 		{
