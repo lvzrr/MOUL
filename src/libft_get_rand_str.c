@@ -10,7 +10,7 @@ char *libft_gen_rand_str(unsigned int max_size)
 	out = (char *)malloc(101 * sizeof(char));
 	i = 0;
 	while ((unsigned int)i < max_size)
-		out[i++] = (char)(20 + rand() % 200);
+		out[i++] = (char)(' ' + rand() %95);
 	out[i] = 0;
 	return (out);
 }

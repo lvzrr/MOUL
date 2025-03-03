@@ -11,7 +11,6 @@ const char *banner =
 int	main(int argc, char **argv)
 {
 	
-	libft_printf("%s\t\t\t\tA Moulinette Wannabe\n\n", banner);
 	int	level;
 
 	if (argc < 2)
@@ -44,13 +43,60 @@ int	main(int argc, char **argv)
 
 	if (libft_strcmp(argv[1], "trace") == 0)
 	{
-		// Implement logic to print trace of the last test
-		libft_printf("Printing trace of the last test...\n");
-		// Add actual trace logic here
+		char *p = getenv("MOUL_TRACE");
+		if (!p)
+		{
+			fprintf(stderr, "MOUL_TRACE not set\n");
+			return 1;
+		}
+		FILE *fp = fopen(p, "r");
+		if (!fp)
+		{
+			perror("Error opening file");
+			return 1;
+		}
+		if (fseek(fp, 0, SEEK_END) != 0)
+		{
+			perror("fseek error");
+			fclose(fp);
+			return 1;
+		}
+		long size = ftell(fp);
+		if (size < 0)
+		{
+			perror("ftell error");
+			fclose(fp);
+			return 1;
+		}
+		rewind(fp);
+		char *filecontents = (char *)malloc((size + 1) * sizeof(char));
+		if (!filecontents)
+		{
+			perror("Memory allocation failed");
+			fclose(fp);
+			return 1;
+		}
+		size_t bytesRead = fread(filecontents, 1, size, fp);
+		if (bytesRead != (size_t)size)
+		{
+			perror("Error reading file");
+			free(filecontents);
+			fclose(fp);
+			return 1;
+		}
+		filecontents[bytesRead] = '\0';
+		fclose(fp);
+		printf("%s", filecontents);
+		free(filecontents);
 		return (0);
 	}
 
+	libft_printf("%s\t\t\t\tA Moulinette Wannabe\n\n", banner);
+	init_trace();
 	level = libft_atoi(argv[1]);
+	w_trace(banner);
+	w_trace("\t\t\t\t\tA Moulinette Wannabe\n\n");
+	w_trace("========STARTING JOB FOR C%02d========\n",level);
 	switch (level)
 	{
 		case 0:

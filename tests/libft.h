@@ -18,6 +18,9 @@
 #define TESTNUM 500000
 #define TESTPASSED 0
 
+void			w_trace(const char *fmt, ...);
+void			init_trace(void);
+
 typedef int (*t_func)(void);
 
 int				libft_atoi(char *str);
@@ -28,7 +31,10 @@ int				libft_strcmp(const char *s1, const char *s2);
 int				libft_strlcat(char *dst, char *src, unsigned int size);
 int				libft_strncmp(char *s1, char *s2, int size);
 int				libft_fibonacci(int n);
+int				libft_sqrt(int n);
 int				libft_str_is_alpha(char *s);
+int				libft_find_next_prime(int n);
+int				libft_is_prime(int n);
 int				libft_str_is_numeric(char *s);
 int				libft_str_is_lowercase(char *s);
 int				libft_str_is_uppercase(char *s);

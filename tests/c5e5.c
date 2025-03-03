@@ -2,12 +2,19 @@
 
 int main()
 {
-	
+	srand(time(NULL));
 	int c = 0;
 	while (c < TESTNUM)
 	{
 		int n = rand() % 46342;
-		int ft = ft_sqrt(n * n);
+		int ft;
+		if (c % 10 == 0)
+		{
+			ft = ft_sqrt(-(n * n));
+			n = 0;
+		}
+		else 
+			ft = ft_sqrt(n * n);
 		if (n == 46341)
 			n = 0;
 		if (ft != n)

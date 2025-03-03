@@ -23,6 +23,8 @@ int				ft_recursive_power(int n, int x);
 int				ft_iterative_power(int n, int x);
 int				ft_fibonacci(int n);
 int				ft_sqrt(int n);
+int				ft_is_prime(int n);
+int				ft_find_next_prime(int n);
 char			*ft_strupcase(char *str);
 char			*ft_strcapitalize(char *str);
 char			*ft_strlowcase(char *str);

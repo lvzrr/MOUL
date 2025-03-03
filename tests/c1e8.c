@@ -1,8 +1,5 @@
 #include "test.h"
 
-#undef TESTNUM
-#define TESTNUM 10000
-
 int	main(void)
 {
 	int		c;
@@ -16,8 +13,10 @@ int	main(void)
 	while (c < TESTNUM)
 	{
 		c2 = 0;
-		l = rand() % 1000;
+		l = rand() % 100;
 		tab = (int*) malloc(sizeof(int) * l);
+		if (c % 100000 == 0)
+    		 w_trace("sorting tab of length %d\n", l);
 		while(c2 < l)
 		{
 			tmp = rand();

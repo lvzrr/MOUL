@@ -17,6 +17,8 @@ int	main(void)
 		p1 = rand();
 		p2 = rand();
 		ft_div_mod(p1, p2, &ptr1, &ptr2);
+		if (c % 100000 == 0)
+			w_trace("x : %d\ty : %d -> x : %d\ty : %d\n", p1, p2, ptr1, ptr2);
 		if (ptr1 != p1 / p2 || ptr2 != p1 % p2)
 		{
 			libft_printf_err("\n\t\t\e[1;91mFAILED TEST\e[0m:\n\t\t\tinput:\t%d, %d\n\t\t\toutput:\t%d, %d\n\n",p1,p2,ptr1,ptr2);

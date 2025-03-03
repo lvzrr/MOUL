@@ -1,7 +1,7 @@
 #include "test.h"
 
 #undef TESTNUM
-#define TESTNUM 10000
+#define TESTNUM 1000000
 
 int	main(void)
 {
@@ -17,9 +17,11 @@ int	main(void)
 	while (c < TESTNUM)
 	{
 		c2 = 0;
-		l = rand() % 1000;
+		l = rand() % 100;
 		tab = (int*) malloc(sizeof(int) * l);
 		tab2 = (int*) malloc(sizeof(int) * l);
+		if (c % 100000 == 0)
+    		 w_trace("reversing tab of length %d\n", l);
 		while(c2 < l)
 		{
 			tmp = rand();
