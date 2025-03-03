@@ -8,12 +8,20 @@ const char *banner =
 "\t██║ ╚═╝ ██║╚█████╔╝╚██████╔╝███████╗\n"
 "\t╚═╝     ╚═╝ ╚════╝  ╚═════╝ ╚══════╝\n";
 
+const char *trace_banner = 
+"\n\n\t███╗   ███╗ ██████╗ ██╗   ██╗██╗         ████████╗██████╗  █████╗  ██████╗███████╗\n"
+"\t████╗ ████║██╔═══██╗██║   ██║██║         ╚══██╔══╝██╔══██╗██╔══██╗██╔════╝██╔════╝\n"
+"\t██╔████╔██║██║   ██║██║   ██║██║            ██║   ██████╔╝███████║██║     █████╗  \n"
+"\t██║╚██╔╝██║██║   ██║██║   ██║██║            ██║   ██╔══██╗██╔══██║██║     ██╔══╝  \n"
+"\t██║ ╚═╝ ██║╚██████╔╝╚██████╔╝███████╗       ██║   ██║  ██║██║  ██║╚██████╗███████╗\n"
+"\t╚═╝     ╚═╝ ╚═════╝  ╚═════╝ ╚══════╝       ╚═╝   ╚═╝  ╚═╝╚═╝  ╚═╝ ╚═════╝╚══════╝\n";
+
 int	main(int argc, char **argv)
 {
 	
 	int	level;
 
-	libft_putstr("\033[2J");
+	libft_putstr("\033[2J\033[H");
 
 	if (argc < 2)
 	{
@@ -88,15 +96,22 @@ int	main(int argc, char **argv)
 		}
 		filecontents[bytesRead] = '\0';
 		fclose(fp);
-		printf("%s", filecontents);
+		libft_putstr("\033[2J\033[H");
+		libft_putstr(filecontents);
 		free(filecontents);
+		char	sigout = 0;
+		fflush(stdout);
+		libft_putstr("\n\e[0;107;30mpress intro to exit.\e[0m\n");
+		while (sigout != '\n')
+			sigout = getchar();
+		libft_putstr("\033[2J\033[H");
 		return (0);
 	}
 
 	libft_printf("%s\t\t\t\tA Moulinette Wannabe\n\n", banner);
 	init_trace();
 	level = libft_atoi(argv[1]);
-	w_trace(banner);
+	w_trace(trace_banner);
 	w_trace("\t\t\t\t\tA Moulinette Wannabe\n\n");
 	w_trace("\n\n============STARTING JOB FOR C%02d============\n\n",level);
 	switch (level)

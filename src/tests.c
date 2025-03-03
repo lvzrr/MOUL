@@ -117,13 +117,22 @@ void print_summary(int grade, struct timeval start_time, int size)
 	                      (end_time.tv_usec - start_time.tv_usec) / 1000000.0;
 
 	libft_printf("\n+--------------- SUMMARY ---------------+\n");
+	w_trace("\n+--------------- SUMMARY ---------------+\n");
 	printf("Total Runtime: %.4f seconds\n", elapsed_time);
+	w_trace("Total Runtime: %.4f seconds\n", elapsed_time);
 	fflush(stdout);
 	libft_printf("Total Tests: %d\n", TESTNUM * size);
+	w_trace("Total Tests: %d\n", TESTNUM * size);
 	if (grade >= 50)
+	{
 		libft_printf("\e[42;30m Final Grade: %d \e[0m\n\n", grade);
+		w_trace("\e[42;30m Final Grade: %d \e[0m\n\n", grade);
+	}
 	else
+	{
 		libft_printf("\e[41;30m Final Grade: %d \e[0m\n\n", grade);
+		w_trace("\e[41;30m Final Grade: %d \e[0m\n\n", grade);
+	}
 }
 
 int libft_test(t_func tests[], unsigned int size)
