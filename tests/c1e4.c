@@ -17,7 +17,7 @@ int	main(void)
 		p2 = rand();
 		ptr2 = p2;
 		ft_ultimate_div_mod(&ptr1, &ptr2);
-        if (c % 10000 == 0)
+        if (c % 100000 == 0)
 			w_trace("x : %d\ty : %d -> x : %d\ty : %d\n", p1, p2, ptr1, ptr2);
 		if (ptr1 != p1 / p2 || ptr2 != p1 % p2)
 		{

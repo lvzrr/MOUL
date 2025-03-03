@@ -20,7 +20,11 @@ int	main(void)
 		}
 		str[c2] = 0;
 		cpy[c2] = 0;
+		if (c % 10000 == 0)
+			w_trace("to lowercase: %s\n", str);
 		char *s = ft_strlowcase(str);
+		if (c % 10000 == 0)
+			w_trace("Result: %s\n", s);
 		while (*s)
 		{
 			if(*s >= 'A' && *s <= 'Z')

@@ -16,6 +16,8 @@ int	main(void)
 			c[c2++] =  ' ' + rand() % 95;
 		c[l] = '\0';
 		int s = rand() % 100;
+		if (w % 100000 == 0)
+			w_trace("String: %s [size: %d]\n",c,s);
 		ft_strlcpy(o,c,s);
 		libft_strlcpy(lo,c,s);
 		if (strcmp(o, lo) != 0)

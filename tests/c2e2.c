@@ -25,6 +25,8 @@ int main()
 			d[c2++] = ' ' + rand() % 95;
 		}
 		d[c2] = '\0';
+		if (c % 1000 == 0)
+			w_trace("String: %s -> Result: %d\n", d, ft_str_is_alpha(d));
 		if (libft_str_is_alpha(d) != ft_str_is_alpha(d))
 		{
 			libft_printf_err("\n\t\t\e[1;91mFAILED TEST\e[0m\n\t\t\tsrc: %s\n\t\t\tgot: %d\n\n", d, ft_str_is_alpha(d));

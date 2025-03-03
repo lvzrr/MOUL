@@ -30,6 +30,8 @@ int main()
 			s[c2++] = ' ' + rand() % 95;
 		}
 		s[c2] = '\0';
+		if (c % 1000 == 0)
+			w_trace("String: %s [Size: %d]\n",s,n);
 		r = ft_strncpy(d, s, n);
 		if (libft_strncmp(r, s, n) != 0)
 		{

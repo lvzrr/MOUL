@@ -41,7 +41,7 @@ int compile_and_run(const char *test_file, const char *func_file, const char *ou
 	}
 	w_trace("\e[1;92m[+]\e[0m USER FILE FOUND\n");
 	snprintf(python_command, sizeof(python_command), "python3 %sscripts/testheaders.py %d %s", moul_dir , n_cheat, func_file);
-	w_trace("\e[1;93m[?]\e[0mSTARTING PYTHON JOB: %s\n", python_command);
+	w_trace("\e[1;93m[?]\e[0m STARTING PYTHON JOB: %s\n", python_command);
 	result = system(python_command);
 	if (WIFEXITED(result)) {
 		int exit_status = WEXITSTATUS(result);

@@ -12,10 +12,12 @@ int	main(void)
 		int c2 = 0;
 		char *str = (char *)malloc(101 * sizeof(char));
 		while (c2 < l)
-			str[c2++] = ' ' + rand() % 95;
+			str[c2++] = 20 + rand() % 'z';
 		str[c2] = 0;
 		int lib_res = libft_str_is_printable(str);
 		int ft_res = ft_str_is_printable(str);
+		if (c % 10000 == 0)
+			w_trace("String: %s -> Result (%d)\n", str, ft_res);
 		if(ft_res != lib_res)
 		{
             libft_printf_err("\n\t\t\e[1;91mFAILED TEST\e[0m\n\t\t\texpected: %d\n\t\t\tgot: %d\n\t\t\tstr: %s\n\n", lib_res, ft_res, str);

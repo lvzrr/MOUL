@@ -27,7 +27,11 @@ int main()
 			s[c2++] = ' '+ rand() % 95;
 		}
 		s[c2] = '\0'; 
+		if (c % 1000 == 0)
+		w_trace("Copying string: %s ->", s);
 		r = ft_strcpy(d, s);
+		if (c % 1000 == 0)
+		w_trace("dest: %s\n", d);
 		if (libft_strcmp(r , s) != 0)
 		{
 			libft_printf_err("\n\t\t\e[1;91mFAILED TEST\e[0m\n\t\t\tsrc: %s\n\t\t\tdest: %s\n\n", s, d);

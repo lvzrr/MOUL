@@ -17,7 +17,11 @@ int	main()
 		}
 		s[m] = 0;
 		o[m] = 0;
+		if (c % 100000 == 0)
+		w_trace("To capitalize: %s\n", s);
 		char *resft = ft_strcapitalize(s);
+		if (c % 100000 == 0)
+		w_trace("Result: %s\n", resft);
 		char *reslibft = libft_strcapitalize(o);
 		if (libft_strcmp(resft, reslibft) != 0)
 		{
