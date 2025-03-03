@@ -37,6 +37,12 @@ int	main(int argc, char **argv)
 		return (0);
 	}
 
+	if (libft_strcmp(argv[1], "update") == 0)
+	{
+		system("cd ~/.moul && git pull && make");
+		return (0);
+	}
+
 	if (libft_strcmp(argv[1], "help") == 0)
 	{
 		libft_printf("\nUsage: moul [options]\n");
