@@ -26,7 +26,7 @@ Options:
 ## INSTALL
 Just run this command:
 ```bash
-git clone https://github.com/lvzrr/MOUL ~/.moul && cd ~/.moul && make install && moul && exit
+git clone https://github.com/lvzrr/MOUL ~/.moul && cd ~/.moul && make install && source ./zshrc && moul help && exit
 ```
 > [!WARNING] 
 > Make sure you are in the root of your git repo
