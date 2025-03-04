@@ -21,7 +21,7 @@ Options:
   trace - Print trace of the last test
   help - Show this message
 ```
-42 school testrunner for the C piscine that uses runtime compilation with no buildsystem in pure C.
+42 school testrunner for the C piscine.
 
 ## INSTALL
 Just run this command:
@@ -29,10 +29,7 @@ Just run this command:
 git clone https://github.com/lvzrr/MOUL ~/.moul && cd ~/.moul && make install && source ~/.zshrc && moul help && exit
 ```
 ## SUPPORTED TESTS
-
-| EX  | SUPPORTED  |
-|---|---|
-||---|
+Essentially all that do NOT need to write to STDOUT up to the C05 batch, C05 included. 
 
 > [!WARNING] 
 > Make sure you are in the root of your git repo when you run it
