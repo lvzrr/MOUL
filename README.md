@@ -21,7 +21,7 @@ Options:
   trace - Print trace of the last test
   help - Show this message
 ```
-42 school testrunner for the C piscine.
+42 school testrunner for the C piscine that uses runtime compilation with no buildsystem in pure C.
 
 ## INSTALL
 Just run this command:
